@@ -23,6 +23,7 @@ ADD startup.sh /bin
 EXPOSE 3002
 EXPOSE 3003
 EXPOSE 3005
+EXPOSE 4713
 
 HEALTHCHECK --interval=10s --timeout=3s CMD netstat -na|grep 3002&&netstat -na|grep 3003&&netstat -na|grep 3005||exit 1
 
