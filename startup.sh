@@ -13,7 +13,7 @@ ser2net -d &
 
 
 echo "Configure Pulseaudio"
-cat << eof >>
+cat << eof >> /etc/pulse/default.pa
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;10.101.10.53;10.101.10.1;
 load-module module-zeroconf-publish
 load-module module-alsa-source device=hw:1,0 source_name=gerolf1
