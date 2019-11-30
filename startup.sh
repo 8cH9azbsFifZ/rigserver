@@ -28,5 +28,8 @@ eof
 
 pulseaudio --start
 
+# FIXME: Rig model
+rigctld -m 133 -r $TTY_CAT_PORT &
+
 exec "$@"
 

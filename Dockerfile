@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get -y install ser2net 
 RUN apt-get -y install net-tools
 RUN apt-get -y install pulseaudio 
+RUN apt-get -y install libhamlib-utils
 RUN apt-get -qqy autoclean && rm -rf /tmp/* /var/tmp/*
 
 # Default configuration of ports
@@ -20,6 +21,8 @@ ENV TTY_CAT_PORT "3002"
 ENV TTY_CAT_PORT2 "3005"
 ENV TTY_PTT_CONF "4800 8DATABITS NONE 2STOPBITS"
 ENV TTY_PTT_PORT "3003"
+
+
 
 ADD startup.sh /bin
 
