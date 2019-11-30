@@ -12,6 +12,8 @@ RUN apt-get -qqy autoclean && rm -rf /tmp/* /var/tmp/*
 ENV TTY_PTT /dev/ttyUSB0
 ENV TTY_CAT /dev/ttyUSB1
 
+# FIXME: Insert Label for TRX Type
+
 # Configured for VX 1700
 ENV TTY_CAT_CONF "4800 8DATABITS NONE 2STOPBITS"
 ENV TTY_CAT_PORT "3002"
