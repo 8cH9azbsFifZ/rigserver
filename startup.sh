@@ -10,7 +10,7 @@ eof
 #FIXME: PTT Port as RTS raw?
 
 echo "Start source CAT port"
-ser2net -d &
+#ser2net -d &
 
 
 echo "Configure Pulseaudio"
