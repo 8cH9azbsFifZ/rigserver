@@ -24,6 +24,7 @@ load-module module-alsa-sink device=hw:1,0 sink_name=Sink
 set-default-sink Sink
 set-default-source Source
 eof
+#FIXME: Multicast? https://unix.stackexchange.com/questions/471222/pulseaudio-rtp-multicast-how-to-play-sound-on-sender-too
 
 pulseaudio --start
 
