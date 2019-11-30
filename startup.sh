@@ -13,13 +13,14 @@ ser2net -d &
 
 
 echo "Configure Pulseaudio"
+#FIXME
 cat << eof >> /etc/pulse/default.pa
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;10.101.10.53;10.101.10.1;
 load-module module-zeroconf-publish
-load-module module-alsa-source device=hw:1,0 source_name=gerolf1
-load-module module-alsa-sink device=hw:1,0 sink_name=gerolf2
-set-default-sink gerolf2
-set-default-source gerolf1
+load-module module-alsa-source device=hw:1,0 source_name=Source
+load-module module-alsa-sink device=hw:1,0 sink_name=Sink
+set-default-sink Sink
+set-default-source Source
 eof
 
 pulseaudio --start

@@ -1,5 +1,4 @@
 FROM debian 
-#:buster-slim
 
 MAINTAINER Gerolf Ziegenhain "gerolf.ziegenhain@gmail.com"
 
@@ -7,8 +6,6 @@ RUN apt-get update
 RUN apt-get -y install ser2net 
 RUN apt-get -y install net-tools
 RUN apt-get -y install pulseaudio 
-#pulseaudio-module-zeroconf avahi-daemon dbus-x11 --fix-missing
-#RUN apt-get -y install paprefs
 RUN apt-get -qqy autoclean && rm -rf /tmp/* /var/tmp/*
 
 ENV TTY_CAT /dev/ttyUSB1
