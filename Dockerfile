@@ -29,7 +29,11 @@ ADD startup.sh /bin
 EXPOSE 3002
 EXPOSE 3003
 EXPOSE 3005
+# Pulseaudio
 EXPOSE 4713
+# Hamlib
+EXPOSE 4532 
+
 #FIXME: port range with multiple ports?
 
 # FIXME: maybe a more useful check?
