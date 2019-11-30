@@ -24,7 +24,6 @@ ENV TTY_PTT_PORT "3003"
 
 
 
-ADD startup.sh /bin
 
 EXPOSE 3002
 EXPOSE 3003
@@ -38,6 +37,8 @@ EXPOSE 4532
 
 # FIXME: maybe a more useful check?
 HEALTHCHECK --interval=10s --timeout=3s CMD netstat -na|grep 3002&&netstat -na|grep 3003&&netstat -na|grep 3005&&netstat -na|grep 4713||exit 1
+
+ADD startup.sh /bin
 
 ENTRYPOINT ["startup.sh"]
 CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
