@@ -9,7 +9,7 @@ $TTY_PTT_PORT:telnet:600:$TTY_PTT:$TTY_PTT_CONF
 eof
 #FIXME: PTT Port as RTS raw?
 
-echo "Start source CAT port"
+#echo "Start source CAT port"
 #ser2net -d &
 
 
@@ -29,6 +29,7 @@ eof
 pulseaudio --start
 
 # FIXME: Rig model
+sleep 10
 rigctld -m 133 -r $TTY_CAT_PORT &
 
 exec "$@"
